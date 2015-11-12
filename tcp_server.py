@@ -24,6 +24,7 @@ class InfoServer:
         while True:
             self.client, address = sock.accept()     # wait forever for an incoming connection
             data = self.client.recv(self.my_buffer)
+            print 'A msg said: '+data
             self.client.close()
 
     def send(self, msg):

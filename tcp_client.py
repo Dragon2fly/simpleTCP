@@ -16,7 +16,7 @@ def client(port, me):
     sock.connect(server_address)
 
     try:
-        message = 'I want to tell you that ' + me
+        message = 'Hey there, ' + me
         sock.sendall(message)
         data = sock.recv(my_buffer)
         print 'Server said '+data
